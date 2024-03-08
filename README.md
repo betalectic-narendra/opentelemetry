@@ -1,4 +1,6 @@
+
 # Fastify OpenTelemetry
+[Blog for NodeJS Implementation](https://www.notion.so/stere/NodeJs-App-with-Jaeger-Integration-for-Opentelemetry-7b361c2e5e8a45bc9dc0f6c9cbe3e0b1)
 
 A [Fastify] plugin that uses the [OpenTelemetry API] to provide request tracing.
 
@@ -198,4 +200,3 @@ Each version of the OpenTelemetry API will require a specific release of fastify
 [`defaultTextMapSetter`]: https://open-telemetry.github.io/opentelemetry-js/globals.html#defaulttextmapsetter
 [OpenTelemetry instrumentations]: https://github.com/open-telemetry/opentelemetry-js#node-instrumentations--plugins
 [`AsyncHooksContextManager`]: https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-context-async-hooks
-[`Blog for NodeJS Implementation`]: https://www.notion.so/stere/NodeJs-App-with-Jaeger-Integration-for-Opentelemetry-7b361c2e5e8a45bc9dc0f6c9cbe3e0b1

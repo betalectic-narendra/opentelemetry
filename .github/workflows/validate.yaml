@@ -1,0 +1,16 @@
+name: Validate
+on: [pull_request, workflow_call]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16, 18, 20]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: 'https://registry.npmjs.org/'
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run validate

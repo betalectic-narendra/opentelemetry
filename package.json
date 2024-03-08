@@ -1,0 +1,78 @@
+{
+  "name": "@autotelic/fastify-opentelemetry",
+  "version": "0.20.0",
+  "description": "A Fastify plugin for OpenTelemetry",
+  "main": "index.js",
+  "files": [
+    "fastify-opentelemetry.d.ts"
+  ],
+  "types": "fastify-opentelemetry.d.ts",
+  "scripts": {
+    "dev": "node example/index.js",
+    "fix": "npm run lint -- --fix",
+    "lint": "eslint .",
+    "test": "tap -j1 --show-full-coverage test/*.test.js",
+    "tsd": "tsd --files ./test/types/fastify-opentelemetry.test-d.ts",
+    "validate": "npm run lint && npm run test && npm run tsd",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autotelic/fastify-opentelemetry.git"
+  },
+  "keywords": [
+    "fastify",
+    "opentelemetry",
+    "metrics",
+    "monitoring",
+    "plugin",
+    "tracing"
+  ],
+  "author": "Holden Whitehead <holden@autotelic.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/autotelic/fastify-opentelemetry/issues"
+  },
+  "homepage": "https://github.com/autotelic/fastify-opentelemetry#readme",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@opentelemetry/api": "^1.0.0",
+    "@opentelemetry/instrumentation": "^0.44.0",
+    "@opentelemetry/instrumentation-http": "^0.44.0",
+    "@opentelemetry/sdk-trace-base": "^1.22.0",
+    "@opentelemetry/sdk-trace-node": "^1.17.1",
+    "@types/node": "^18.18.8",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.52.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "fastify": "^4.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "sinon": "^17.0.1",
+    "tap": "^18.5.6",
+    "tsd": "^0.29.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": "^1.0.0"
+  },
+  "dependencies": {
+    "@autotelic/fastify-opentelemetry": "^0.20.0",
+    "@opentelemetry/exporter-jaeger": "^1.22.0",
+    "@opentelemetry/resources": "^1.22.0",
+    "@opentelemetry/semantic-conventions": "^1.22.0",
+    "@opentelemetry/tracing": "^0.24.0",
+    "fastify-plugin": "^4.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run fix"
+    ]
+  }
+}
